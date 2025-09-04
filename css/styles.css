@@ -20,12 +20,18 @@ h1 {
   text-align: center;
 }
 
-/* Estilo para el logo */
-.logo-img {
-  height: 80px;
+h4 {
+  font-family: 'Winky Rough', cursive;
+  color: #505050;
+  text-align: center;
 }
 
-/* Estilo para la barra de navegacion */
+/* Logo */
+.logo-img {
+  height: 70px;
+}
+
+/* Navbar */
 .nav-link {
   text-decoration: none;
   color: #004b3f;
@@ -36,7 +42,6 @@ h1 {
   border: 1px solid #004b3f;
   border-radius: 6px;
   transition: all 0.3s ease;
-  /* CAMBIO AQUI: agregamos el margen horizontal */
   margin: 0 10px; 
 }
 
@@ -46,7 +51,7 @@ h1 {
   transform: scale(1.05);
 }
 
-/* Estilo para los iconos sociales del footer */
+/* Footer */
 .social-link {
   color: #333;
   text-decoration: none;
@@ -61,4 +66,113 @@ h1 {
 
 .social-link:hover {
   color: #00735c;
+}
+
+/* Cards de partidos */
+.match-card {
+  border: 2px solid #004b3f;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin: 0.6rem auto;
+  max-width: 450px;
+  background: linear-gradient(135deg, #cdf0e4, #a1c1b4);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor equipos */
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Equipo */
+.team {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+.club-logo {
+  max-width: 60px;
+  height: auto;
+}
+
+.team-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+/* "vs" */
+.versus {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 0.8rem;
+}
+
+/* Hora */
+.match-time {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.club-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.table {
+  font-size: 0.85rem;
+}
+
+.card {
+  background-color: #cce3dc;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.pos {
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+}
+
+/* ✅ Nueva card para cada día */
+.day-card {
+  background: #ffffff;
+  border: 2px solid #004b3f;
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.day-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #004b3f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.club-logo {
+      width: 80px;
+      height: auto;
+      margin-right: 10px;
+}
+
+.accordion-button img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
 }
