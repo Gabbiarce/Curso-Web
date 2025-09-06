@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main {
+  margin-top: 80px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #222;
@@ -11,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 80px;
 }
 
 /* Encabezados y Titulos */
@@ -262,5 +267,9 @@ h4 {
   .match-time {
     font-size: 14px;
     text-align: center;
+  }
+
+  body {
+    padding-top: 90px;
   }
 }
