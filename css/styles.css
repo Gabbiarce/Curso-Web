@@ -207,51 +207,60 @@ h4 {
   margin-right: 10px;
 }
 
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;  /* Scroll horizontal si hace falta */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Forzar tabla a ocupar todo el ancho disponible */
+.table {
+  width: 100% !important;
+  min-width: 500px; /* Ancho mínimo para evitar que se aplaste demasiado */
+}
+
+/* Ajustes de cards y logos en móvil */
 @media (max-width: 600px) {
-
-  /* Contenedor principal */
-  body {
-    padding: 0 5px; /* Margen interno para respirar en pantallas chicas */
+  .fixture {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre partidos */
   }
 
-  /* Cards de partidos */
-  .match-card, .day-card {
-    max-width: 100%; /* Que ocupen todo el ancho disponible */
-    margin: 0.5rem 0;
-    padding: 0.8rem;
+  .match-card {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
-  /* Tablas */
-  .table {
-    font-size: 0.75rem; /* Fuente más chica */
-    width: 100%;
+  .teams {
+    flex-direction: column; /* Equipos uno arriba del otro */
+    align-items: center;
+    text-align: center;
   }
 
-  .table img {
-    max-width: 20px; /* Escalar iconos */
+  .versus {
+    margin: 5px 0;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .club-logo {
+    width: 50px; /* Escala logos */
     height: auto;
   }
 
-  /* Logos de clubes */
-  .club-logo {
-    width: 50px;
-    margin-right: 5px;
-  }
-
-  /* Texto equipos */
   .team-name {
-    font-size: 0.75rem;
+    font-size: 14px;
   }
 
-  /* Ajustar "vs" */
-  .versus {
-    font-size: 1rem;
-    margin: 0 0.4rem;
-  }
-
-  /* Ajustar paddings de la navbar */
-  .navbar-nav .nav-item {
-    margin-left: 5px;
-    flex: unset; /* Que no estiren */
+  .match-time {
+    font-size: 14px;
+    text-align: center;
   }
 }
