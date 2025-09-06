@@ -206,3 +206,52 @@ h4 {
   height: auto;
   margin-right: 10px;
 }
+
+@media (max-width: 600px) {
+
+  /* Contenedor principal */
+  body {
+    padding: 0 5px; /* Margen interno para respirar en pantallas chicas */
+  }
+
+  /* Cards de partidos */
+  .match-card, .day-card {
+    max-width: 100%; /* Que ocupen todo el ancho disponible */
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+  }
+
+  /* Tablas */
+  .table {
+    font-size: 0.75rem; /* Fuente más chica */
+    width: 100%;
+  }
+
+  .table img {
+    max-width: 20px; /* Escalar iconos */
+    height: auto;
+  }
+
+  /* Logos de clubes */
+  .club-logo {
+    width: 50px;
+    margin-right: 5px;
+  }
+
+  /* Texto equipos */
+  .team-name {
+    font-size: 0.75rem;
+  }
+
+  /* Ajustar "vs" */
+  .versus {
+    font-size: 1rem;
+    margin: 0 0.4rem;
+  }
+
+  /* Ajustar paddings de la navbar */
+  .navbar-nav .nav-item {
+    margin-left: 5px;
+    flex: unset; /* Que no estiren */
+  }
+}
