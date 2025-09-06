@@ -51,6 +51,26 @@ h4 {
   transform: scale(1.05);
 }
 
+.navbar .container-fluid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.navbar-collapse {
+  flex-grow: unset !important; /* no se estira todo */
+}
+
+.navbar-nav {
+  display: flex !important; /* asegura menú horizontal */
+  flex-direction: row !important;
+  margin-left: auto !important; 
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
 /* Footer */
 .social-link {
   color: #333;
