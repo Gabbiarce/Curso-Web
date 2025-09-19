@@ -1,81 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Winky+Rough&display=swap');
 
-* {
-  box-sizing: border-box;
+// 🎨 Variables
+$primary-color: #004b3f;
+$secondary-color: #00735c;
+$bg-color: #a1c1b4;
+$light-bg: #ffffff;
+$gradient: linear-gradient(135deg, #cdf0e4, #a1c1b4);
+
+// 🎬 Mixins
+@mixin animation-effect($property, $duration, $delay: 0s) {
+  transition: #{$property} #{$duration} ease-in-out #{$delay};
+  &:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
 }
 
-main {
-  margin-top: 100px;
+// ⚙️ Base
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   color: #222;
-  background-color: #a1c1b4;
+  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-top: 80px;
 }
 
-/* Encabezados y Titulos */
-h1 {
+main {
+  margin-top: 100px;
+}
+
+// 📝 Encabezados
+h1, h4 {
   font-family: 'Winky Rough', cursive;
-  color: #000;
   text-align: center;
 }
 
-h4 {
-  font-family: 'Winky Rough', cursive;
-  color: #505050;
-  text-align: center;
-}
+h1 { color: #000; }
+h4 { color: #505050; }
 
-/* Logo */
+// 🖼️ Logo
 .logo-img {
   height: 70px;
 }
 
-/* Navbar */
+// 🔗 Navbar
 .nav-link {
   text-decoration: none;
-  color: #004b3f;
+  color: $primary-color;
   font-weight: 600;
   font-size: 12px;
   padding: 6px 10px;
-  background-color: #ffffff;
-  border: 1px solid #004b3f;
+  background-color: $light-bg;
+  border: 1px solid $primary-color;
   border-radius: 6px;
-  transition: all 0.3s ease;
+
+  // ✅ animación con mixin
+  @include animation-effect(all, 0.3s);
+
+  &:hover {
+    background-color: #cdf0e4;
+    color: darken($primary-color, 10%);
+  }
 }
 
-.nav-link:hover {
-  background-color: #cdf0e4;
-  color: #003328;
-  transform: scale(1.05);
-}
+.navbar {
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.navbar .container-fluid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .navbar-collapse { flex-grow: unset; }
 
-.navbar-collapse {
-  flex-grow: unset
-}
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 10px;
 
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  gap: 10px;
-}
-
-.navbar-nav .nav-item {
-  margin-left: 10px;
-  text-align: center;
-  flex: 1 1 auto;
+    .nav-item {
+      margin-left: 10px;
+      text-align: center;
+      flex: 1 1 auto;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -86,72 +99,66 @@ h4 {
   }
 }
 
-/* Footer */
+// 📌 Footer
 .social-link {
   color: #333;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
+
+  i { font-size: 24px; }
+
+  &:hover { color: $secondary-color; }
 }
 
-.social-link i {
-  font-size: 24px;
-}
-
-.social-link:hover {
-  color: #00735c;
-}
-
-/* Cards de partidos */
+// 🏟️ Cards partidos
 .match-card {
-  border: 2px solid #004b3f;
+  border: 2px solid $primary-color;
   padding: 0.5rem;
   border-radius: 12px;
   margin: 0.6rem auto;
   max-width: 450px;
-  background: linear-gradient(135deg, #cdf0e4, #a1c1b4);
+  background: $gradient;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  // ✅ animación con mixin
+  @include animation-effect(all, 0.3s);
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.match-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Contenedor equipos */
+// 🏆 Contenedor equipos
 .teams {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Equipo */
 .team {
   text-align: center;
   margin: 0 0.5rem;
+
+  .club-logo {
+    max-width: 60px;
+    height: auto;
+  }
+
+  .team-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+  }
 }
 
-.club-logo {
-  max-width: 60px;
-  height: auto;
-}
-
-.team-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-}
-
-/* "vs" */
 .versus {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0 0.8rem;
 }
 
-/* Hora */
 .match-time {
   margin-top: 0.6rem;
   font-size: 0.85rem;
@@ -164,8 +171,11 @@ h4 {
   object-fit: contain;
 }
 
+// 📊 Tablas
 .table {
   font-size: 0.85rem;
+  width: 100% !important;
+  min-width: 500px;
 }
 
 .card {
@@ -178,34 +188,32 @@ h4 {
 }
 
 .pos {
-    font-weight: bold;
-    text-align: center;
-    width: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
 }
 
-/* ✅ Nueva card para cada día */
+// 📅 Nueva card día
 .day-card {
-  background: #ffffff;
-  border: 2px solid #004b3f;
+  background: $light-bg;
+  border: 2px solid $primary-color;
   border-radius: 14px;
   padding: 1rem;
   margin: 1.5rem auto;
   max-width: 700px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+  // ✅ animación con mixin
+  @include animation-effect(all, 0.3s);
 }
 
+// 📅 Día título
 .day-title {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #004b3f;
+  color: $primary-color;
   text-align: center;
   margin-bottom: 1rem;
-}
-
-.club-logo {
-      width: 80px;
-      height: auto;
-      margin-right: 10px;
 }
 
 .accordion-button img {
@@ -216,57 +224,47 @@ h4 {
 
 .table-responsive {
   width: 100%;
-  overflow-x: auto;  /* Scroll horizontal si hace falta */
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 0 auto;
   padding: 0 5px;
-  max-width: 95vw; 
+  max-width: 95vw;
 }
 
-/* Forzar tabla a ocupar todo el ancho disponible */
-.table {
-  width: 100% !important;
-  min-width: 500px; /* Ancho mínimo para evitar que se aplaste demasiado */
-}
-
-/* Ajustes de cards y logos en móvil */
+// 📱 Ajustes móviles
 @media (max-width: 600px) {
   .fixture {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaciado entre partidos */
+    gap: 10px;
   }
 
   .match-card {
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
   }
 
   .teams {
-    flex-direction: column; /* Equipos uno arriba del otro */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .versus {
-    margin: 5px 0;
-  }
+  .versus { margin: 5px 0; }
 
   .team {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
 
-  .club-logo {
-    width: 50px; /* Escala logos */
-    height: auto;
-  }
+    .club-logo {
+      width: 50px;
+      height: auto;
+    }
 
-  .team-name {
-    font-size: 14px;
+    .team-name { font-size: 14px; }
   }
 
   .match-time {
@@ -274,9 +272,7 @@ h4 {
     text-align: center;
   }
 
-  body {
-    padding-top: 90px;
-  }
+  body { padding-top: 90px; }
 
   h1 {
     font-size: 1.6rem;
@@ -288,7 +284,5 @@ h4 {
     margin-bottom: 1.2rem;
   }
 
-  .table {
-    font-size: 0.75rem;
-  }
+  .table { font-size: 0.75rem; }
 }

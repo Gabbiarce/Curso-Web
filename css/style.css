@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Winky+Rough&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  background-color: #a1c1b4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+main {
+  margin-top: 100px;
+}
+
+h1, h4 {
+  font-family: "Winky Rough", cursive;
+  text-align: center;
+}
+
+h1 {
+  color: #000;
+}
+
+h4 {
+  color: #505050;
+}
+
+.logo-img {
+  height: 70px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #004b3f;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 10px;
+  background-color: #ffffff;
+  border: 1px solid #004b3f;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-link:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+.nav-link:hover {
+  background-color: #cdf0e4;
+  color: rgb(0, 24, 20.16);
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-collapse {
+  flex-grow: unset;
+}
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 10px;
+}
+.navbar .navbar-nav .nav-item {
+  margin-left: 10px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 600px) {
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+.social-link {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.social-link i {
+  font-size: 24px;
+}
+.social-link:hover {
+  color: #00735c;
+}
+
+.match-card {
+  border: 2px solid #004b3f;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin: 0.6rem auto;
+  max-width: 450px;
+  background: linear-gradient(135deg, #cdf0e4, #a1c1b4);
+  text-align: center;
+  transition: all 0.3s ease-in-out 0s;
+}
+.match-card:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+.match-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+.team .club-logo {
+  max-width: 60px;
+  height: auto;
+}
+.team .team-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.versus {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 0.8rem;
+}
+
+.match-time {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.club-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.table {
+  font-size: 0.85rem;
+  width: 100% !important;
+  min-width: 500px;
+}
+
+.card {
+  background-color: #cce3dc;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin: 0 auto;
+  max-width: 95vw;
+  padding: 1rem;
+}
+
+.pos {
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+}
+
+.day-card {
+  background: #ffffff;
+  border: 2px solid #004b3f;
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out 0s;
+}
+.day-card:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.day-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #004b3f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.accordion-button img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  padding: 0 5px;
+  max-width: 95vw;
+}
+
+@media (max-width: 600px) {
+  .fixture {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .match-card {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .teams {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .versus {
+    margin: 5px 0;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team .club-logo {
+    width: 50px;
+    height: auto;
+  }
+  .team .team-name {
+    font-size: 14px;
+  }
+  .match-time {
+    font-size: 14px;
+    text-align: center;
+  }
+  body {
+    padding-top: 90px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .table {
+    font-size: 0.75rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
