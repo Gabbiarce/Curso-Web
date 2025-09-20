@@ -438,4 +438,23 @@ h4::before {
   .table-row .pts,
   .table-row .pj,
   .table-row .dg { font-size: 0.85rem; }
+
+  /* ----------------------------- */
+  /* ACORDEÓN RESPONSIVE            */
+  /* ----------------------------- */
+  @media (max-width: 600px) {
+    .accordion-item {
+      margin: 0.3rem auto;
+      max-width: 95%; /* que no se salga de la pantalla */
+    }
+
+    .accordion-button {
+      font-size: 0.9rem; /* más legible en móvil */
+      padding: 0.6rem 1rem;
+    }
+
+    .accordion-button::after {
+      right: 1rem; /* ajustar posición de la flecha */
+    }
+  }
 }
