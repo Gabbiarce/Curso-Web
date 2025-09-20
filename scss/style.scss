@@ -283,13 +283,18 @@ h4::before {
 /* ----------------------------- */
 
 /* Mobile vertical (portrait) */
+/* ----------------------------- */
+/* MOBILE RESPONSIVE COMPACTO     */
+/* ----------------------------- */
+
+/* Mobile vertical (portrait) */
 @media (max-width: 600px) and (orientation: portrait) {
   body { padding-top: 60px; }
 
   h1 { font-size: 1.2rem; margin-bottom: 0.3rem; }
   h4 { font-size: 0.85rem; margin-bottom: 0.8rem; }
 
-  /* NAVBAR */
+  /* NAVBAR: todos los botones iguales y vertical */
   .navbar .navbar-nav {
     flex-direction: column;
     width: 100%;
@@ -299,11 +304,20 @@ h4::before {
     width: 100%;
     font-size: 10px;
     padding: 4px 0;
+    text-align: center;
   }
 
-  /* FIXTURE / MATCH CARD */
-  .fixture { display: flex; flex-direction: column; gap: 6px; }
-  .match-card { width: 100%; padding: 6px; margin: 0; }
+  /* FIXTURE / INDEX: flexbox uniforme */
+  .fixture,
+  .index-flex { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    align-items: center; 
+  }
+
+  /* MATCH CARD */
+  .match-card { width: 95%; padding: 6px; margin: 0; }
   .teams { flex-direction: column; align-items: center; text-align: center; }
   .versus { margin: 3px 0; font-size: 1rem; }
   .team .club-logo { width: 35px; }
@@ -315,10 +329,11 @@ h4::before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 4px;
+    padding: 3px;
     gap: 1px;
     height: auto;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 0.7rem;
   }
   .table-row .pos,
   .table-row .pts,
@@ -326,8 +341,8 @@ h4::before {
   .table-row .dg,
   .table-row .team {
     width: 100%;
-    font-size: 0.75rem;
     text-align: left;
+    font-size: 0.7rem;
   }
   .table-row .team { font-weight: bold; }
   .table-header { display: none; }
@@ -345,7 +360,7 @@ h4::before {
   h1 { font-size: 1.4rem; }
   h4 { font-size: 0.9rem; }
 
-  /* NAVBAR: fila */
+  /* NAVBAR: fila flexible */
   .navbar .navbar-nav {
     flex-direction: row;
     justify-content: center;
@@ -359,11 +374,20 @@ h4::before {
     flex: 1 1 auto;
   }
 
-  /* FIXTURE */
-  .fixture { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  /* FIXTURE / INDEX */
+  .fixture,
+  .index-flex { 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 4px; 
+  }
+
+  /* MATCH CARD */
   .match-card { max-width: 280px; padding: 5px; margin: 0.2rem; }
 
-  /* TABLAS: scroll horizontal si necesario */
+  /* TABLAS: scroll horizontal si es necesario */
   .custom-table {
     display: block;
     overflow-x: auto;
@@ -373,11 +397,15 @@ h4::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     grid-auto-rows: 40px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-align: center;
     padding: 2px 3px;
   }
-  .table-row .team { text-align: left; justify-self: start; font-size: 0.75rem; }
-  .table-header { display: grid; grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); font-size: 0.75rem; }
+  .table-row .team { text-align: left; justify-self: start; font-size: 0.7rem; }
+  .table-header { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); 
+    font-size: 0.7rem; 
+  }
 }
 
