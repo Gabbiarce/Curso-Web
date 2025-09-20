@@ -421,7 +421,7 @@ h4::before {
 }
 
 /* ----------------------------- */
-/* RESPONSIVE                      */
+/* RESPONSIVE MOBILE              */
 /* ----------------------------- */
 @media (max-width: 600px) {
   body {
@@ -495,6 +495,26 @@ h4::before {
   .table-row .pj,
   .table-row .dg {
     font-size: 0.85rem;
+  }
+  .accordion-item {
+    margin: 0.3rem auto;
+    max-width: 95%;
+  }
+  .accordion-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+  .accordion-button::after {
+    right: 1rem;
+  }
+  .card {
+    padding: 0.8rem;
+    max-width: 95vw;
+  }
+  .posiciones-grid .table-header,
+  .posiciones-grid .table-row {
+    grid-template-columns: 30px 1fr 35px 30px 50px 40px 90px;
+    padding: 6px 0;
   }
 }
 
