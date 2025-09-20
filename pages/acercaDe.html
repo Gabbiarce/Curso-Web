@@ -12,9 +12,9 @@
   <header>
     <nav class="navbar navbar-light bg-light fixed-top">
       <div class="container-fluid d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/logo.png" alt="Logo de Fulbo" class="d-inline-block align-top logo-img" />
-        </a>
+        <span class="navbar-brand">
+          <img src="../assets/img/logo.png" alt="Logo de Fulbo" class="logo-img" />
+        </span>
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
           <li class="nav-item"><a class="nav-link" href="./tablaPosiciones.html">TABLA POSICIONES</a></li>
@@ -35,7 +35,7 @@
       <!-- 1. Boca Juniors -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="BOCA">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-BOCA" aria-expanded="false" aria-controls="BOCA">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-BOCA" aria-expanded="false" aria-controls="collapseBOCA">
             <img src="../assets/img/boca.png" alt="Boca Juniors" class="club-icon me-2"> Boca Juniors
           </button>
         </h2>
@@ -152,7 +152,7 @@
       <!-- 6. Estudiantes (La Plata) -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="ESTUDIANTES">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-ESTUDIANTES" aria-expanded="false" aria-controls="SANLORENZO">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-ESTUDIANTES" aria-expanded="false" aria-controls="ESTUDIANTES">
             <img src="../assets/img/estudiantes.png" alt="Estudiantes" class="club-icon me-2"> Estudiantes
           </button>
         </h2>
@@ -195,9 +195,9 @@
 
       <!-- 8. Huracan -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingHuracan">
+        <h2 class="accordion-header" id="HURACAN">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHuracan" aria-expanded="false" aria-controls="collapseHuracan">
-            <img src="../assets/img/huracan.png" alt="Huracan"> Huracan
+            <img src="../assets/img/huracan.png" alt="Huracan" class="club-icon me-2"> Huracan
           </button>
         </h2>
         <div id="collapseHuracan" class="accordion-collapse collapse" aria-labelledby="headingHuracan" data-bs-parent="#accordionClubs">
@@ -218,7 +218,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingRosarioCentral">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRosarioCentral" aria-expanded="false" aria-controls="collapseRosarioCentral">
-            <img src="../assets/img/rosariocentral.png" alt="Rosario Central"> Rosario Central
+            <img src="../assets/img/rosariocentral.png" alt="Rosario Central" class="club-icon me-2"> Rosario Central
           </button>
         </h2>
         <div id="collapseRosarioCentral" class="accordion-collapse collapse" aria-labelledby="headingRosarioCentral" data-bs-parent="#accordionClubs">
@@ -240,7 +240,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingNewells">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNewells" aria-expanded="false" aria-controls="collapseNewells">
-            <img src="../assets/img/newells.png" alt="Newell’s Old Boys"> Newell’s Old Boys
+            <img src="../assets/img/newells.png" alt="Newell’s Old Boys" class="club-icon me-2"> Newell’s Old Boys
           </button>
         </h2>
         <div id="collapseNewells" class="accordion-collapse collapse" aria-labelledby="headingNewells" data-bs-parent="#accordionClubs">
@@ -261,7 +261,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingLanus">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLanus" aria-expanded="false" aria-controls="collapseLanus">
-            <img src="../assets/img/lanus.png" alt="Lanus"> Lanus
+            <img src="../assets/img/lanus.png" alt="Lanus" class="club-icon me-2"> Lanus
           </button>
         </h2>
         <div id="collapseLanus" class="accordion-collapse collapse" aria-labelledby="headingLanus" data-bs-parent="#accordionClubs">
@@ -283,7 +283,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingArgentinos">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArgentinos" aria-expanded="false" aria-controls="collapseArgentinos">
-            <img src="../assets/img/argentinos.png" alt="Argentinos"> Argentinos
+            <img src="../assets/img/argentinos.png" alt="Argentinos" class="club-icon me-2"> Argentinos
           </button>
         </h2>
         <div id="collapseArgentinos" class="accordion-collapse collapse" aria-labelledby="headingArgentinos" data-bs-parent="#accordionClubs">
@@ -304,7 +304,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingBanfield">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBanfield" aria-expanded="false" aria-controls="collapseBanfield">
-            <img src="../assets/img/banfield.png" alt="Banfield"> Banfield
+            <img src="../assets/img/banfield.png" alt="Banfield" class="club-icon me-2"> Banfield
           </button>
         </h2>
         <div id="collapseBanfield" class="accordion-collapse collapse" aria-labelledby="headingBanfield" data-bs-parent="#accordionClubs">
@@ -325,7 +325,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingDefensa">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDefensa" aria-expanded="false" aria-controls="collapseDefensa">
-            <img src="../assets/img/defensa.png" alt="Defensa"> Defensa
+            <img src="../assets/img/defensa.png" alt="Defensa" class="club-icon me-2"> Defensa
           </button>
         </h2>
         <div id="collapseDefensa" class="accordion-collapse collapse" aria-labelledby="headingDefensa" data-bs-parent="#accordionClubs">
@@ -345,7 +345,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTalleres">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTalleres" aria-expanded="false" aria-controls="collapseTalleres">
-            <img src="../assets/img/talleres.png" alt="Talleres"> Talleres
+            <img src="../assets/img/talleres.png" alt="Talleres" class="club-icon me-2"> Talleres
           </button>
         </h2>
         <div id="collapseTalleres" class="accordion-collapse collapse" aria-labelledby="headingTalleres" data-bs-parent="#accordionClubs">
@@ -366,7 +366,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingGimnasia">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGimnasia" aria-expanded="false" aria-controls="collapseGimnasia">
-            <img src="../assets/img/gimnasia.png" alt="Gimnasia"> Gimnasia
+            <img src="../assets/img/gimnasia.png" alt="Gimnasia" class="club-icon me-2"> Gimnasia
           </button>
         </h2>
         <div id="collapseGimnasia" class="accordion-collapse collapse" aria-labelledby="headingGimnasia" data-bs-parent="#accordionClubs">
@@ -387,7 +387,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingCtralCordoba">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCtralCordoba" aria-expanded="false" aria-controls="collapseCtralCordoba">
-            <img src="../assets/img/centralcordoba.png" alt="Central Cordoba"> Central Cordoba
+            <img src="../assets/img/centralcordoba.png" alt="Central Cordoba" class="club-icon me-2"> Central Cordoba
           </button>
         </h2>
         <div id="collapseCtralCordoba" class="accordion-collapse collapse" aria-labelledby="headingCtralCordoba" data-bs-parent="#accordionClubs">
@@ -407,7 +407,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingPlatense">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlatense" aria-expanded="false" aria-controls="collapsePlatense">
-            <img src="../assets/img/platense.png" alt="Platense"> Platense
+            <img src="../assets/img/platense.png" alt="Platense" class="club-icon me-2"> Platense
           </button>
         </h2>
         <div id="collapsePlatense" class="accordion-collapse collapse" aria-labelledby="headingPlatense" data-bs-parent="#accordionClubs">
@@ -427,7 +427,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingAtlTucuman">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAtlTucuman" aria-expanded="false" aria-controls="collapseAtlTucuman">
-            <img src="../assets/img/atleticotucuman.png" alt="Atletico Tucuman"> Atletico Tucuman
+            <img src="../assets/img/atleticotucuman.png" alt="Atletico Tucuman" class="club-icon me-2"> Atletico Tucuman
           </button>
         </h2>
         <div id="collapseAtlTucuman" class="accordion-collapse collapse" aria-labelledby="headingAtlTucuman" data-bs-parent="#accordionClubs">
@@ -447,7 +447,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTigre">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTigre" aria-expanded="false" aria-controls="collapseTigre">
-            <img src="../assets/img/tigre.png" alt="Tigre"> Tigre
+            <img src="../assets/img/tigre.png" alt="Tigre" class="club-icon me-2"> Tigre
           </button>
         </h2>
         <div id="collapseTigre" class="accordion-collapse collapse" aria-labelledby="headingTigre" data-bs-parent="#accordionClubs">
@@ -467,7 +467,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingBelgrano">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBelgrano" aria-expanded="false" aria-controls="collapseBelgrano">
-            <img src="../assets/img/belgrano.png" alt="Belgrano"> Belgrano
+            <img src="../assets/img/belgrano.png" alt="Belgrano" class="club-icon me-2"> Belgrano
           </button>
         </h2>
         <div id="collapseBelgrano" class="accordion-collapse collapse" aria-labelledby="headingBelgrano" data-bs-parent="#accordionClubs">
@@ -483,7 +483,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingInstituto">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstituto" aria-expanded="false" aria-controls="collapseInstituto">
-            <img src="../assets/img/instituto.png" alt="Instituto"> Instituto
+            <img src="../assets/img/instituto.png" alt="Instituto" class="club-icon me-2"> Instituto
           </button>
         </h2>
         <div id="collapseInstituto" class="accordion-collapse collapse" aria-labelledby="headingInstituto" data-bs-parent="#accordionClubs">
@@ -499,7 +499,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingGodoycruz">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGodoycruz" aria-expanded="false" aria-controls="collapseGodoycruz">
-            <img src="../assets/img/godoycruz.png" alt="Godoy Cruz"> Godoy Cruz
+            <img src="../assets/img/godoycruz.png" alt="Godoy Cruz" class="club-icon me-2"> Godoy Cruz
           </button>
         </h2>
         <div id="collapseGodoycruz" class="accordion-collapse collapse" aria-labelledby="headingGodoycruz" data-bs-parent="#accordionClubs">
@@ -515,7 +515,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSanmartinsj">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSanmartinsj" aria-expanded="false" aria-controls="collapseSanmartinsj">
-            <img src="../assets/img/sanmartinsj.png" alt="San Martin de San Juan"> San Martin de San Juan
+            <img src="../assets/img/sanmartinsj.png" alt="San Martin de San Juan" class="club-icon me-2"> San Martin de San Juan
           </button>
         </h2>
         <div id="collapseSanmartinsj" class="accordion-collapse collapse" aria-labelledby="headingSanmartinsj" data-bs-parent="#accordionClubs">
@@ -531,7 +531,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingIndRivadavia">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndRivadavia" aria-expanded="false" aria-controls="collapseIndRivadavia">
-            <img src="../assets/img/independienteriv.png" alt="Independiente Rivadavia"> Independiente Rivadavia
+            <img src="../assets/img/independienteriv.png" alt="Independiente Rivadavia" class="club-icon me-2"> Independiente Rivadavia
           </button>
         </h2>
         <div id="collapseIndRivadavia" class="accordion-collapse collapse" aria-labelledby="headingIndRivadavia" data-bs-parent="#accordionClubs">
@@ -547,7 +547,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingUnion">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnion" aria-expanded="false" aria-controls="collapseUnion">
-            <img src="../assets/img/union.png" alt="Union"> Union
+            <img src="../assets/img/union.png" alt="Union" class="club-icon me-2"> Union
           </button>
         </h2>
         <div id="collapseUnion" class="accordion-collapse collapse" aria-labelledby="headingUnion" data-bs-parent="#accordionClubs">
@@ -563,7 +563,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSarmiento">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSarmiento" aria-expanded="false" aria-controls="collapseSarmiento">
-            <img src="../assets/img/sarmiento.png" alt="Sarmiento"> Sarmiento
+            <img src="../assets/img/sarmiento.png" alt="Sarmiento" class="club-icon me-2"> Sarmiento
           </button>
         </h2>
         <div id="collapseSarmiento" class="accordion-collapse collapse" aria-labelledby="headingSarmiento" data-bs-parent="#accordionClubs">
@@ -579,7 +579,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingAldosivi">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAldosivi" aria-expanded="false" aria-controls="collapseAldosivi">
-            <img src="../assets/img/aldosivi.png" alt="Aldosivi"> Aldosivi
+            <img src="../assets/img/aldosivi.png" alt="Aldosivi" class="club-icon me-2"> Aldosivi
           </button>
         </h2>
         <div id="collapseAldosivi" class="accordion-collapse collapse" aria-labelledby="headingAldosivi" data-bs-parent="#accordionClubs">
@@ -595,7 +595,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingBarracas">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarracas" aria-expanded="false" aria-controls="collapseBarracas">
-            <img src="../assets/img/barracas.png" alt="Barracas"> Barracas
+            <img src="../assets/img/barracas.png" alt="Barracas" class="club-icon me-2"> Barracas
           </button>
         </h2>
         <div id="collapseBarracas" class="accordion-collapse collapse" aria-labelledby="headingBarracas" data-bs-parent="#accordionClubs">
@@ -611,7 +611,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingRiestra">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRiestra" aria-expanded="false" aria-controls="collapseRiestra">
-            <img src="../assets/img/riestra.png" alt="Riestra"> Deportivo Riestra
+            <img src="../assets/img/riestra.png" alt="Riestra" class="club-icon me-2"> Deportivo Riestra
           </button>
         </h2>
         <div id="collapseRiestra" class="accordion-collapse collapse" aria-labelledby="headingRiestra" data-bs-parent="#accordionClubs">
@@ -628,9 +628,15 @@
   <footer class="bg-light text-center text-lg-start mt-auto py-3">
     <div class="container-fluid">
       <div class="d-flex justify-content-center justify-content-lg-start">
-        <span class="social-link"><i class="fab fa-instagram"></i> Fulbo.ok</span>
-        <span class="social-link ms-3"><i class="fab fa-x-twitter"></i> Fulbo.oficial</span>
-        <span class="social-link ms-3"><i class="fab fa-facebook"></i> Fulbo</span>
+        <span class="social-link">
+          <i class="fab fa-instagram"></i> Fulbo.ok
+        </span>
+        <span class="social-link ms-3">
+          <i class="fab fa-x-twitter"></i> Fulbo.oficial
+        </span>
+        <span class="social-link ms-3">
+          <i class="fab fa-facebook"></i> Fulbo
+        </span>
       </div>
     </div>
   </footer>

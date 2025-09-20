@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Winky+Rough&display=swap");
+
+/* ----------------------------- */
+/* RESET Y BODY                  */
+/* ----------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -6,7 +10,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #222;
-  background-color: #a1c1b4;
+  background: linear-gradient(135deg, #a1c1b4, #cdf0e4, #a1c1b4);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -28,10 +32,56 @@ h1 {
 
 h4 {
   color: #505050;
+  position: relative;
 }
 
+h4::before {
+  content: "⚽ ";
+  font-size: 1.2rem;
+}
+
+/* ----------------------------- */
+/* LOGO ANIMADO                  */
+/* ----------------------------- */
 .logo-img {
   height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  animation: spin 0.8s ease-in-out;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) scale(1); }
+  to   { transform: rotate(360deg) scale(1.1); }
+}
+
+/* ----------------------------- */
+/* NAVBAR                        */
+/* ----------------------------- */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-collapse {
+  flex-grow: unset;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-left: 10px;
+  text-align: center;
+  flex: 1 1 auto;
 }
 
 .nav-link {
@@ -45,70 +95,50 @@ h4 {
   border-radius: 6px;
   transition: all 0.3s ease-in-out 0s;
 }
+
 .nav-link:hover {
   transform: scale(1.05) translateY(-5px);
-}
-.nav-link:hover {
   background-color: #cdf0e4;
   color: rgb(0, 24, 20.16);
 }
 
-.navbar .container-fluid {
-  display: flex;
-  justify-content: space-between;
+/* ----------------------------- */
+/* ICONOS REDES SOCIALES         */
+/* ----------------------------- */
+.social-link {
+  color: #004b3f;
+  font-size: 1.2rem;
+  display: inline-flex;
   align-items: center;
-}
-.navbar .navbar-collapse {
-  flex-grow: unset;
-}
-.navbar .navbar-nav {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  gap: 10px;
-}
-.navbar .navbar-nav .nav-item {
-  margin-left: 10px;
-  text-align: center;
-  flex: 1 1 auto;
+  gap: 6px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .navbar-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-}
-.social-link {
-  color: #333;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.social-link i {
-  font-size: 24px;
-}
 .social-link:hover {
   color: #00735c;
+  transform: scale(1.2) rotate(8deg);
 }
 
+/* ----------------------------- */
+/* PARTIDOS / FIXTURE             */
+/* ----------------------------- */
 .match-card {
-  border: 2px solid #004b3f;
+  border: none;
   padding: 0.5rem;
-  border-radius: 12px;
+  border-radius: 16px;
   margin: 0.6rem auto;
   max-width: 450px;
-  background: linear-gradient(135deg, #cdf0e4, #a1c1b4);
+  background-color: rgba(0, 75, 63, 0.15);
+  backdrop-filter: blur(8px);
   text-align: center;
   transition: all 0.3s ease-in-out 0s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .match-card:hover {
-  transform: scale(1.05) translateY(-5px);
-}
-.match-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .teams {
@@ -121,10 +151,12 @@ h4 {
   text-align: center;
   margin: 0 0.5rem;
 }
+
 .team .club-logo {
   max-width: 60px;
   height: auto;
 }
+
 .team .team-name {
   font-weight: 600;
   font-size: 0.9rem;
@@ -133,8 +165,15 @@ h4 {
 
 .versus {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 0 0.8rem;
+  color: #004b3f;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); color: #004b3f; }
+  50% { transform: scale(1.2); color: #00735c; }
 }
 
 .match-time {
@@ -143,18 +182,53 @@ h4 {
   color: #333;
 }
 
+/* ----------------------------- */
+/* ICONOS CLUB                    */
+/* ----------------------------- */
 .club-icon {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: auto;
   object-fit: contain;
 }
 
-.table {
-  font-size: 0.85rem;
-  width: 100% !important;
-  min-width: 500px;
+/* ----------------------------- */
+/* ACERCA DE                    */
+/* ----------------------------- */
+.accordion-item{
+  border: none;
+  border-radius: 12px;
+  margin: 0.5rem auto;
+  max-width: 800px;
+  background-color: rgba(0, 75, 63, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+.accordion-button {
+  background-color: #004b3f;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #00735c;
+  color: #fff;
+}
+
+/* Flecha del acordeón siempre blanca */
+.accordion-button::after {
+  filter: invert(1); /* invierte colores para que se vea blanca */
+}
+
+/* También al expandirse */
+.accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+
+/* ----------------------------- */
+/* CARTAS / CONTENEDORES          */
+/* ----------------------------- */
 .card {
   background-color: #cce3dc;
   border: 1px solid #ddd;
@@ -170,93 +244,204 @@ h4 {
   width: 30px;
 }
 
-.day-card {
-  background: #ffffff;
-  border: 2px solid #004b3f;
-  border-radius: 14px;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  max-width: 700px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out 0s;
-}
-.day-card:hover {
-  transform: scale(1.05) translateY(-5px);
-}
-
-.day-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #004b3f;
+/* ----------------------------- */
+/* TABLAS                         */
+/* ----------------------------- */
+.custom-table .table-header,
+.custom-table .table-row {
+  display: grid;
+  align-items: center;
+  padding: 8px 0;
   text-align: center;
-  margin-bottom: 1rem;
+  gap: 5px;
 }
 
-.accordion-button img {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
+.custom-table .table-header {
+  background-color: #004b3f;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
 }
 
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 0 auto;
-  padding: 0 5px;
-  max-width: 95vw;
+.custom-table .table-header div:nth-child(2),
+.custom-table .table-row .team {
+  text-align: left;
 }
 
+/* Diferentes columnas para cada tipo de tabla */
+.promedios-grid .table-header,
+.promedios-grid .table-row {
+  grid-template-columns: 40px 1fr 50px 40px 80px;
+}
+
+.anual-grid .table-header,
+.anual-grid .table-row {  
+  grid-template-columns: 40px 1fr 50px 40px 60px 50px 40px;
+}
+
+.clausura-grid .table-header,
+.clausura-grid .table-row {  
+  grid-template-columns: 40px 1fr 40px 40px 50px 50px 140px;
+}
+
+.table-row.octavos      { background-color: #a2d5f2; font-weight: bold;}
+.table-row.libertadores { background-color: #f3ca28; font-weight: bold;}
+.table-row.repechaje    { background-color: #f86e18; font-weight: bold;}
+.table-row.sudamericana { background-color: #4edff5; font-weight: bold;}
+.table-row.descenso     { background-color: #dc3545; font-weight: bold;}
+
+.table-row {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.table-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.table-row:hover::before {
+  width: 5px;
+}
+
+.table-row .team {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+}
+
+/* Leyenda */
+.legend {
+  display: flex;
+  align-items: center;
+  margin: 12px 0 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.legend-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.legend-circle.descenso { background-color: #dc3545; }
+.legend-circle.libertadores { background-color: #ffc107; }
+.legend-circle.repechaje { background-color: #fd7e14; }
+.legend-circle.sudamericana { background-color: #17a2b8; }
+.legend-circle.octavos { background-color: #a2d5f2; }
+
+/* ----------------------------- */
+/* POSICIONES                     */
+/* ----------------------------- */
+.posiciones-grid {
+  display: grid;
+  gap: 5px;
+}
+
+.posiciones-grid .table-header,
+.posiciones-grid .table-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 50px 40px 60px 50px 100px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.posiciones-grid .table-header div:nth-child(2),
+.posiciones-grid .table-row .team {
+  text-align: left;
+}
+
+.posiciones-grid .table-header {
+  background-color: #004b3f;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE                      */
+/* ----------------------------- */
 @media (max-width: 600px) {
+  body {
+    padding-top: 90px;
+  }
+
+  h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+  h4 { font-size: 1rem; margin-bottom: 1.2rem; }
+
   .fixture {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .match-card {
     width: 100%;
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
   }
+
   .teams {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .versus {
-    margin: 5px 0;
-  }
+
+  .versus { margin: 5px 0; }
+
   .team {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .team .club-logo {
-    width: 50px;
-    height: auto;
+
+  .team .club-logo { width: 50px; height: auto; }
+  .team .team-name { font-size: 14px; }
+
+  .match-time { font-size: 14px; text-align: center; }
+
+  .table { font-size: 0.75rem; }
+
+  .table-header { display: none; }
+
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: left;
+    padding: 10px;
   }
-  .team .team-name {
-    font-size: 14px;
-  }
-  .match-time {
-    font-size: 14px;
-    text-align: center;
-  }
-  body {
-    padding-top: 90px;
-  }
-  h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-  }
-  h4 {
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-  }
-  .table {
-    font-size: 0.75rem;
-  }
+
+  .table-row .pos { grid-column: 1 / 2; font-weight: bold; }
+  .table-row .team { grid-column: 1 / -1; font-size: 1rem; font-weight: bold; }
+  .table-row .pts,
+  .table-row .pj,
+  .table-row .dg { font-size: 0.85rem; }
 }
 
+
 /*# sourceMappingURL=style.css.map */
+
