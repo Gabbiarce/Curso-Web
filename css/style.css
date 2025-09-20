@@ -96,7 +96,7 @@ h4::before {
   background-color: #ffffff;
   border: 1px solid #004b3f;
   border-radius: 6px;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
@@ -135,7 +135,7 @@ h4::before {
   background-color: rgba(0, 75, 63, 0.15);
   backdrop-filter: blur(8px);
   text-align: center;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -274,7 +274,6 @@ h4::before {
   text-align: left;
 }
 
-/* Diferentes columnas para cada tipo de tabla */
 .promedios-grid .table-header,
 .promedios-grid .table-row {
   grid-template-columns: 40px 1fr 50px 40px 80px;
@@ -421,7 +420,7 @@ h4::before {
 }
 
 /* ----------------------------- */
-/* RESPONSIVE MOBILE              */
+/* RESPONSIVE                      */
 /* ----------------------------- */
 @media (max-width: 600px) {
   body {
@@ -435,6 +434,18 @@ h4::before {
     font-size: 1rem;
     margin-bottom: 1.2rem;
   }
+  /* NAVBAR MOBILE */
+  .navbar .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+  .navbar .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  /* FIXTURE / MATCH CARD */
   .fixture {
     display: flex;
     flex-direction: column;
@@ -444,7 +455,6 @@ h4::before {
     width: 100%;
     margin: 0;
     padding: 10px;
-    box-sizing: border-box;
   }
   .teams {
     flex-direction: column;
@@ -455,7 +465,6 @@ h4::before {
     margin: 5px 0;
   }
   .team {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -470,32 +479,31 @@ h4::before {
     font-size: 14px;
     text-align: center;
   }
-  .table {
-    font-size: 0.75rem;
+  /* TABLAS MOBILE: convertir cada fila en tarjeta vertical */
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+    gap: 3px;
+  }
+  .table-row .pos,
+  .table-row .pts,
+  .table-row .pj,
+  .table-row .dg,
+  .table-row .team {
+    width: 100%;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+  .table-row .team {
+    font-weight: bold;
   }
   .table-header {
     display: none;
   }
-  .table-row {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    text-align: left;
-    padding: 10px;
-  }
-  .table-row .pos {
-    grid-column: 1/2;
-    font-weight: bold;
-  }
-  .table-row .team {
-    grid-column: 1/-1;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  .table-row .pts,
-  .table-row .pj,
-  .table-row .dg {
-    font-size: 0.85rem;
-  }
+  /* ACORDEÓN MOBILE */
   .accordion-item {
     margin: 0.3rem auto;
     max-width: 95%;
@@ -506,15 +514,6 @@ h4::before {
   }
   .accordion-button::after {
     right: 1rem;
-  }
-  .card {
-    padding: 0.8rem;
-    max-width: 95vw;
-  }
-  .posiciones-grid .table-header,
-  .posiciones-grid .table-row {
-    grid-template-columns: 30px 1fr 35px 30px 50px 40px 90px;
-    padding: 6px 0;
   }
 }
 
